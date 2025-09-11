@@ -1,6 +1,6 @@
-FXN := cos,sin,sinc
-TXT := filename.txt
-FMT := jpeg,eps,pdf
+FXN = cos,sin,sinc
+TXT = filename.txt
+FMT = jpeg,eps,pdf
 
 .PHONY: plot write read
 
@@ -9,4 +9,4 @@ plot:
 write:
 	python trigonometry.py --function=$(FXN) --write=$(TXT)
 read:
-	python trigonometry.py --read_from_file=$(TXT)
+	python trigonometry.py --function=$(FXN) --read_from_file=$(TXT)
